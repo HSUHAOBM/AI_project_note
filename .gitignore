@@ -1,0 +1,30 @@
+# Python 緩存和編譯文件
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 環境配置文件
+.env
+*.env
+
+# Jupyter Notebook 記錄的檔案
+.ipynb_checkpoints
+
+# 本地虛擬環境目錄
+venv/
+nlp_env/
+tf_env/
+
+# 模型文件和緩存
+**/employee_feedback_model/
+**/employee_feedback_tokenizer/
+.cache/
+*.bin
+*.safetensors
+
+# 臨時文件
+.DS_Store
+*.log
+
+# 忽略所有子目錄中的 results 資料夾
+**/results/
