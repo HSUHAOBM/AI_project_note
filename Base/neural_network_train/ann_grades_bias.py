@@ -2,6 +2,9 @@
 # csv
 import csv
 import math
+
+# 1. 讀取 grades-bias.csv，取得每筆資料的 x（時間）和 y（成績）。
+
 read_csv = csv.reader(open('grades-bias.csv'))
 
 x = []  # 輸入：時間
@@ -10,6 +13,7 @@ for row in read_csv:
     x.append(float(row[0]))
     y.append(float(row[1]))
 
+# 2. 設定初始權重（w）和偏差（b），以及學習率（lr）。
 # 建立模型 Y=W*X + B*1
 lr = 0.001  # 學習率
 w = 2  # 隨機一個"權重"
@@ -33,7 +37,7 @@ b = 8  # 隨機一個"偏差"
 # b = b + gradinet_b * lr  # 更新偏差
 # print(f"第二筆 預測的成績：{output}, 誤差：{error}, 更新後的權重：{w}, 更新後的偏差：{b}")
 
-
+# 3. 用梯度下降法（每筆資料都更新 w 和 b）進行多次訓練（epoch）。
 # 迴圈訓練
 len(x)  # 總共有幾筆資料
 epoch = 10  # 訓練次數
